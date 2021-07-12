@@ -11,6 +11,8 @@
 		6B855F2C269C135000FA2ACF /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B855F2B269C135000FA2ACF /* ContentView.swift */; };
 		6B855F2E269C135000FA2ACF /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 6B855F2D269C135000FA2ACF /* Assets.xcassets */; };
 		6B855F31269C135000FA2ACF /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 6B855F30269C135000FA2ACF /* Preview Assets.xcassets */; };
+		6B855F39269C144C00FA2ACF /* MainPage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B855F38269C144C00FA2ACF /* MainPage.swift */; };
+		6B855F3B269C169000FA2ACF /* ProfilePage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B855F3A269C169000FA2ACF /* ProfilePage.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -20,6 +22,8 @@
 		6B855F2D269C135000FA2ACF /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		6B855F30269C135000FA2ACF /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		6B855F32269C135000FA2ACF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		6B855F38269C144C00FA2ACF /* MainPage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainPage.swift; sourceTree = "<group>"; };
+		6B855F3A269C169000FA2ACF /* ProfilePage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfilePage.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -36,6 +40,7 @@
 		6B855F1D269C135000FA2ACF = {
 			isa = PBXGroup;
 			children = (
+				6B855F3A269C169000FA2ACF /* ProfilePage.swift */,
 				6B855F28269C135000FA2ACF /* SwiftUI_Mini_Project */,
 				6B855F27269C135000FA2ACF /* Products */,
 			);
@@ -57,6 +62,7 @@
 				6B855F2D269C135000FA2ACF /* Assets.xcassets */,
 				6B855F32269C135000FA2ACF /* Info.plist */,
 				6B855F2F269C135000FA2ACF /* Preview Content */,
+				6B855F38269C144C00FA2ACF /* MainPage.swift */,
 			);
 			path = SwiftUI_Mini_Project;
 			sourceTree = "<group>";
@@ -140,6 +146,8 @@
 			files = (
 				6B855F2C269C135000FA2ACF /* ContentView.swift in Sources */,
 				6B855F2A269C135000FA2ACF /* SwiftUI_Mini_ProjectApp.swift in Sources */,
+				6B855F3B269C169000FA2ACF /* ProfilePage.swift in Sources */,
+				6B855F39269C144C00FA2ACF /* MainPage.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
