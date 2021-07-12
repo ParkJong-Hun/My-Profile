@@ -10,6 +10,7 @@ import SwiftUI
 struct MainPage: View {
     @State private var sliderValue = 0.0
     @State private var isEditing = false
+    @State private var isOn = false
     var body: some View {
         NavigationView {
             VStack {
@@ -20,12 +21,17 @@ struct MainPage: View {
                 Slider(
                     value: $sliderValue,
                     in: 0...100
-                ) {
+                ) {_ in
                     if(sliderValue >= 100) {
-                        ProfilePage()
+                        isOn = true
                     }
                 }.frame(width: 200, height: 0, alignment: .center)
-                Text("\(sliderValue)")
+                NavigationLink(
+                    destination: ProfilePage(),
+                    isActive: $isOn
+                ) {
+                    EmptyView()
+                }
             }
         }
     }
