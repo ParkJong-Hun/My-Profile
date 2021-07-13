@@ -13,23 +13,29 @@ struct ProfilePage: View {
     var body: some View {
         NavigationView {
             VStack {
+                //Project
                 NavigationView {
                     ScrollView(.horizontal, showsIndicators: false) {
                         HStack() {
-                            ForEach(imageArray, id: \.self) {image in
-                                Image("\(image)").resizable().frame(width: 250, height: 250)
+                            ForEach(imageArray, id: \.self) {image in VStack {
+                                Image("\(image)").resizable().frame(width: 180, height: 180).clipShape(RoundedRectangle(cornerRadius: 60))
+                                Button("\(image)", action:{})
+                                }
                             }
                         }
                     }.frame(width: 300, height: 300).navigationTitle("Project")
                 }.frame(height: 400)
+                
                 Spacer()
+                
+                //WebSite
                 NavigationView {
-                    VStack(alignment: .leading, spacing: 5.0) {
-                        Link("Github",
-                              destination: URL(string: "https://github.com/ParkJong-Hun")!)
+                    VStack(alignment: .leading, spacing: 10.0) {
+                        Link("GitHub",
+                             destination: URL(string: "https://github.com/ParkJong-Hun")!).font(.title)
                         Link("Blog",
-                             destination: URL(string: "https://blog.naver.com/exoci")!)
-                    }.navigationTitle("WebSite")
+                             destination: URL(string: "https://blog.naver.com/exoci")!).font(.title)
+                    }.navigationTitle("WebSite").offset(x: -130, y:-35)
                 }
             }.navigationBarTitle(Text("My Profile"), displayMode: .inline)
         }

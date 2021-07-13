@@ -9,7 +9,14 @@ import SwiftUI
 
 struct ContentView: View {
     var body: some View {
-        MainPage()
+        VStack {
+            MainPage()
+            
+            //footer
+            Text("copyright ©PJH all rights reserved")
+                .font(.footnote)
+                .foregroundColor(Color.gray)
+        }
     }
 }
 
