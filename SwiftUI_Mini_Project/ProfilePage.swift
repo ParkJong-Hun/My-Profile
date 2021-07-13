@@ -9,8 +9,11 @@ import SwiftUI
 
 struct ProfilePage: View {
     var body: some View {
-        Text("This is my profile")
-        
+        NavigationView {
+            VStack {
+                Text("This is my profile")
+            }.navigationBarTitle(Text("My Profile"), displayMode: .inline)
+        }
     }
 }
 

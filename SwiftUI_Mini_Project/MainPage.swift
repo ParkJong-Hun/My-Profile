@@ -15,24 +15,29 @@ struct MainPage: View {
         NavigationView {
             VStack {
                 Image("my_logo2").resizable().aspectRatio(contentMode: .fit).frame(width:200, height:200)
-                Text("My Profile")
-                    .font(.headline)
-                    .multilineTextAlignment(.center)
                 Slider(
                     value: $sliderValue,
                     in: 0...100
                 ) {_ in
                     if(sliderValue >= 100) {
                         isOn = true
+                        sliderValue = 0.0
+                    } else {
+                        isOn = false
                     }
-                }.frame(width: 200, height: 0, alignment: .center)
+                }.padding(.top).frame(width: 300, height: 0, alignment: .trailing)
+                Text("Slide Me")
+                    .font(.headline)
+                    .foregroundColor(Color.gray)
+                    .multilineTextAlignment(.center)
+                    .padding(.top)
                 NavigationLink(
                     destination: ProfilePage(),
                     isActive: $isOn
                 ) {
                     EmptyView()
                 }
-            }
+            }.navigationBarTitle(Text("Main"), displayMode: .inline).navigationBarHidden(true)
         }
     }
 }
