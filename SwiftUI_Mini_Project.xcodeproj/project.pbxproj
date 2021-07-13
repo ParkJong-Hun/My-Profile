@@ -13,6 +13,7 @@
 		6B855F31269C135000FA2ACF /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 6B855F30269C135000FA2ACF /* Preview Assets.xcassets */; };
 		6B855F39269C144C00FA2ACF /* MainPage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B855F38269C144C00FA2ACF /* MainPage.swift */; };
 		6B855F3B269C169000FA2ACF /* ProfilePage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B855F3A269C169000FA2ACF /* ProfilePage.swift */; };
+		6BF16DE6269D5F04000AA68D /* VideoPage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6BF16DE5269D5F04000AA68D /* VideoPage.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +25,7 @@
 		6B855F32269C135000FA2ACF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		6B855F38269C144C00FA2ACF /* MainPage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainPage.swift; sourceTree = "<group>"; };
 		6B855F3A269C169000FA2ACF /* ProfilePage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfilePage.swift; sourceTree = "<group>"; };
+		6BF16DE5269D5F04000AA68D /* VideoPage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VideoPage.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -63,6 +65,7 @@
 				6B855F32269C135000FA2ACF /* Info.plist */,
 				6B855F2F269C135000FA2ACF /* Preview Content */,
 				6B855F38269C144C00FA2ACF /* MainPage.swift */,
+				6BF16DE5269D5F04000AA68D /* VideoPage.swift */,
 			);
 			path = SwiftUI_Mini_Project;
 			sourceTree = "<group>";
@@ -146,6 +149,7 @@
 			files = (
 				6B855F2C269C135000FA2ACF /* ContentView.swift in Sources */,
 				6B855F2A269C135000FA2ACF /* SwiftUI_Mini_ProjectApp.swift in Sources */,
+				6BF16DE6269D5F04000AA68D /* VideoPage.swift in Sources */,
 				6B855F3B269C169000FA2ACF /* ProfilePage.swift in Sources */,
 				6B855F39269C144C00FA2ACF /* MainPage.swift in Sources */,
 			);
