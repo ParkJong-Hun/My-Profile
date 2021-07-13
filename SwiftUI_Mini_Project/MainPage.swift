@@ -19,12 +19,12 @@ struct MainPage: View {
                     value: $sliderValue,
                     in: 0...100
                 ) {_ in
-                    if(sliderValue >= 100) {
+                    if(sliderValue >= 90) {
                         isOn = true
-                        sliderValue = 0.0
                     } else {
                         isOn = false
                     }
+                    sliderValue = 0.0
                 }.padding(.top).frame(width: 300, height: 0, alignment: .trailing)
                 Text("Slide Me")
                     .font(.headline)
