@@ -17,41 +17,49 @@ struct ProfilePage: View {
     
     var body: some View {
         NavigationView {
-            VStack {
-                //Project
-                Text("Proejct").font(.largeTitle).fontWeight(.bold).offset(x: -125, y: /*@START_MENU_TOKEN@*/10.0/*@END_MENU_TOKEN@*/)
-                    ScrollView(.horizontal, showsIndicators: false) {
-                        HStack() {
-                            ForEach(imageArray, id: \.self) {image in
-                                NavigationLink(
-                                    destination:
-                                        VideoPage(
-                                            videoURL: $videoURL[imageArray.firstIndex(of: image)!]
-                                        )
-                                ) {
-                                    VStack {
-                                        Image("\(image)").resizable().frame(width: 180, height: 180).clipShape(RoundedRectangle(cornerRadius: 60))
-                                        Text("\(image)").foregroundColor(.black)
+            ScrollView(.vertical) {
+                VStack(alignment: .leading, spacing: 0.0) {
+                    //Project
+                    Section(header: Text("Proejct")
+                                .font(.largeTitle)
+                                .fontWeight(.bold)
+                                .multilineTextAlignment(.leading)
+                                .padding(.top)) {
+                        ScrollView(.horizontal, showsIndicators: false) {
+                            HStack() {
+                                ForEach(imageArray, id: \.self) {image in
+                                    NavigationLink(
+                                        destination:
+                                            VideoPage(
+                                                videoURL: $videoURL[imageArray.firstIndex(of: image)!]
+                                            )
+                                    ) {
+                                        VStack {
+                                            Image("\(image)").resizable().frame(width: 180, height: 180).clipShape(RoundedRectangle(cornerRadius: 60))
+                                            Text("\(image)").foregroundColor(.black)
+                                        }
                                     }
                                 }
                             }
-                        }
-                    }.frame(width: 300, height: 300)
-                
-                //WebSite
-                NavigationView {
-                    VStack(alignment: .leading, spacing: 20.0) {
-                        HStack {
+                        }.frame(width: 300, height: 300)
+                    }
+                    
+                    //WebSite
+                    Section(header: Text("Web Site")
+                                .font(.largeTitle)
+                                .fontWeight(.bold)
+                                ) {
+                        VStack(alignment: .leading, spacing: 10.0) {
                             Link("GitHub",
                                  destination: URL(string: "https://github.com/ParkJong-Hun")!)
-                        }
-                        HStack {
                             Link("Blog",
                                  destination: URL(string: "https://blog.naver.com/exoci")!)
                         }
-                    }.navigationTitle("WebSite").offset(x: -100, y:-25).font(.title2)
+                        .padding(.top).font(.title2)
+                    }
                 }
-            }.navigationBarTitle(Text("My Profile"), displayMode: .inline)
+                .navigationBarTitle(Text("My Profile"), displayMode: .inline)
+            }
         }
     }
 }

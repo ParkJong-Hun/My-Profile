@@ -32,12 +32,14 @@ struct MainPage: View {
                     .multilineTextAlignment(.center)
                     .padding(.top)
                 NavigationLink(
-                    destination: ProfilePage(),
+                    destination: ProfilePage()
+                        .navigationBarHidden(true),
                     isActive: $isOn
                 ) {
                     EmptyView()
                 }
-            }.navigationBarTitle(Text("Main"), displayMode: .inline).navigationBarHidden(true)
+            }.navigationBarTitle(Text("Main"), displayMode: .inline)
+            .navigationBarHidden(true)
         }
     }
 }
