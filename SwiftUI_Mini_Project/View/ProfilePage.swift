@@ -42,10 +42,14 @@ struct ProfilePage: View {
                                     .font(.caption)
                                 .multilineTextAlignment(.trailing)
                                 .offset(x:-45, y: -10)
-                                Button("More.", action: {})
-                                    .offset(x:-20)
+                                NavigationLink(
+                                    destination: ProfileDetailPage(),
+                                    label: {
+                                        Text("More")
+                                    })
+                                    .offset(x:-10)
                             }.offset(y: 5)
-                        }.multilineTextAlignment(/*@START_MENU_TOKEN@*/.leading/*@END_MENU_TOKEN@*/)
+                        }.multilineTextAlignment(/*@START_MENU_TOKEN@*/.leading/*@END_MENU_TOKEN@*/).offset(x:20)
                     }.padding(.top)
                     
                     //Project
@@ -70,7 +74,7 @@ struct ProfilePage: View {
                                     }
                                 }
                             }
-                        }.frame(width: 300, height: 240)
+                        }
                     }
                     
                     //WebSite
@@ -86,7 +90,7 @@ struct ProfilePage: View {
                         }
                         .padding(.top).font(.title2)
                     }
-                }
+                }.frame(width:350)
             }.navigationBarTitle(Text("My Profile"), displayMode: .inline)
         }
     }
