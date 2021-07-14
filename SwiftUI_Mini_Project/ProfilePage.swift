@@ -10,10 +10,10 @@ import SwiftUI
 struct ProfilePage: View {
     @State private var imageArray:Array<String> = ["Chat", "ToDoList", "GoogleMap", "Game"]
     @State private var videoURL:Array<String> = [
-        "https://bit.ly/3wzKXAn",
-        "https://bit.ly/3hyiMh2",
-        "https://bit.ly/36zUvAK",
-        "https://bit.ly/2U4EKPJ"]
+        "https://serviceapi.nmv.naver.com/flash/convertIframeTag.nhn?vid=E82DD4F57917805215637C0B0B30D4E17E3B&outKey=V128a9a5cf605ab675e134929dbfca43a61235311f25ed07da4634929dbfca43a6123&width=544&height=306",
+        "https://serviceapi.nmv.naver.com/flash/convertIframeTag.nhn?vid=360871052828A10620A7928155487839090E&outKey=V127a8e79d04391e2723b7e48f7778b839e76849ef1871a6c3b277e48f7778b839e76&width=544&height=306",
+        "https://serviceapi.nmv.naver.com/flash/convertIframeTag.nhn?vid=540D7378A6DD45B9BC2F4AFD12B540C69622&outKey=V1210c8e3ef329158fbeb9b8333e86d086eb46d5f72bdadc6b9739b8333e86d086eb4&width=544&height=306",
+        "https://youtu.be/OZYXZBlT9WU"]
     
     var body: some View {
         NavigationView {
@@ -58,8 +58,7 @@ struct ProfilePage: View {
                         .padding(.top).font(.title2)
                     }
                 }
-                .navigationBarTitle(Text("My Profile"), displayMode: .inline)
-            }
+            }.navigationBarTitle(Text("My Profile"), displayMode: .inline)
         }
     }
 }

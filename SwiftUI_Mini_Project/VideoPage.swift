@@ -6,16 +6,18 @@
 //
 
 import SwiftUI
-import AVKit
+import WebKit
 
-struct VideoPage: View {
+struct VideoPage: UIViewRepresentable {
     @Binding var videoURL:String
-    var body: some View {
-        VideoPlayer(player: AVPlayer(url: URL(string: "\(videoURL)")!)) {
-            VStack {
-                    Text("Video").foregroundColor(.white).background(Color.black.opacity(0.6)).clipShape(Capsule())
-                    Spacer()
-            }
-        }
+    
+    func makeUIView(context: Context) -> WKWebView {
+        let webView = WKWebView()
+        webView.load(URLRequest(url: URL(string: videoURL)!))
+        
+        return webView
+    }
+    
+    func updateUIView(_ uiView: WKWebView, context: Context) {
     }
 }
