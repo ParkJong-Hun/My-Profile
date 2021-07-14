@@ -17,8 +17,37 @@ struct ProfilePage: View {
     
     var body: some View {
         NavigationView {
-            ScrollView(.vertical) {
+            ScrollView(.vertical,showsIndicators: false) {
                 VStack(alignment: .leading, spacing: 0.0) {
+                    //Information
+                    Section(header: Text("Information")
+                                .font(.largeTitle)
+                                .fontWeight(.bold)
+                                .multilineTextAlignment(.leading)
+                                .padding(.top)) {
+                        ZStack {
+                            RoundedRectangle(cornerRadius: 15).frame(width:300, height: 200).foregroundColor(Color(white:0.78)).opacity(0.5)
+                            Image("Profile")
+                                .resizable()
+                                .frame(width:120, height:120)
+                                .clipShape(RoundedRectangle(cornerRadius: 30))
+                                .blendMode(.darken)
+                                .offset(x:80)
+                            VStack(spacing: 0) {
+                            Text("Park JongHun").font(.title2).fontWeight(/*@START_MENU_TOKEN@*/.bold/*@END_MENU_TOKEN@*/)
+                                .multilineTextAlignment(.trailing)
+                                .offset(x: -60, y: -25)
+                            
+                                Text("iOS Developer.\nthesn515@gmail.com")
+                                    .font(.caption)
+                                .multilineTextAlignment(.trailing)
+                                .offset(x:-45, y: -10)
+                                Button("More.", action: {})
+                                    .offset(x:-20)
+                            }.offset(y: 5)
+                        }.multilineTextAlignment(/*@START_MENU_TOKEN@*/.leading/*@END_MENU_TOKEN@*/)
+                    }.padding(.top)
+                    
                     //Project
                     Section(header: Text("Proejct")
                                 .font(.largeTitle)
@@ -41,7 +70,7 @@ struct ProfilePage: View {
                                     }
                                 }
                             }
-                        }.frame(width: 300, height: 300)
+                        }.frame(width: 300, height: 240)
                     }
                     
                     //WebSite
