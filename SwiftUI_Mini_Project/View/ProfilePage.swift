@@ -38,7 +38,7 @@ struct ProfilePage: View {
                                 .multilineTextAlignment(.trailing)
                                 .offset(x: -60, y: -25)
                             
-                                Text("iOS Developer.\nthesn515@gmail.com")
+                                Text("Mobile Developer.\nthesn515@gmail.com")
                                     .font(.caption)
                                 .multilineTextAlignment(.trailing)
                                 .offset(x:-45, y: -10)
@@ -56,8 +56,7 @@ struct ProfilePage: View {
                     Section(header: Text("Proejct")
                                 .font(.largeTitle)
                                 .fontWeight(.bold)
-                                .multilineTextAlignment(.leading)
-                                .padding(.top)) {
+                                .multilineTextAlignment(.leading)) {
                         ScrollView(.horizontal, showsIndicators: false) {
                             HStack() {
                                 ForEach(imageArray, id: \.self) {image in
@@ -75,7 +74,7 @@ struct ProfilePage: View {
                                 }
                             }
                         }
-                    }
+                    }.padding(.top, 20)
                     
                     //WebSite
                     Section(header: Text("Web Site")
@@ -87,9 +86,14 @@ struct ProfilePage: View {
                                  destination: URL(string: "https://github.com/ParkJong-Hun")!)
                             Link("Blog",
                                  destination: URL(string: "https://blog.naver.com/exoci")!)
-                        }
-                        .padding(.top).font(.title2)
-                    }
+                        }.font(.title2)
+                    }.padding(.top, 20)
+                    Section(header: Text("Q&A")
+                                .font(.largeTitle)
+                                .fontWeight(.bold)
+                                ) {
+                        
+                    }.padding(.top, 20)
                 }.frame(width:350)
             }.navigationBarTitle(Text("My Profile"), displayMode: .inline)
         }
