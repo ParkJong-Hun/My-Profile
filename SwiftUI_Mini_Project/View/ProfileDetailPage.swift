@@ -38,26 +38,49 @@ struct ProfileDetailPage: View {
                             Text("Speak:")
                             Text("Korean, Japanese(JLPT N1), English, Chinese(HSK 4)").font(.caption)
                         }
-                    }.frame(width:250)
+                    }.frame(width:350)
                     VStack(alignment: .leading, spacing: 3.0) {
-                        Text("Skills").font(.title2).bold().padding(.bottom, 5)
+                        Text("Skills").font(.title).bold().padding(.bottom, 5)
                         HStack {
                             Text("Main Language:")
                             Text("Java, Kotlin, Swift, JavaScript").bold()
                         }
                         HStack {
                             Text("Sub Language:")
-                            Text("C, C++, C#, Python, Go, HTML, CSS, JSP, PHP")
-                        }.font(.caption)
+                            Text("C, C++, C#, Python, Go, HTML, CSS, JSP, PHP").font(.caption)
+                        }
                         HStack {
                             Text("Frameworks:")
                             Text("React.js, Redux, SwiftUI")
-                        }.font(.caption)
+                        }
                         HStack {
                             Text("Tools:")
-                            Text("Android Studio, Xcode, Git, Github, VS Code, Unity3D, Photoshop, Blender")
-                        }.font(.caption)
-                    }.padding(.top, 5).frame(width:250)
+                            Text("Android Studio, Xcode, Git, Github, VS Code, Unity3D, Photoshop, Blender").font(.caption)
+                        }
+                    }.padding(.top, 20).frame(width:350)
+                    VStack(alignment: .leading, spacing: 3.0) {
+                        Text("Experience").font(.title).bold().padding(.bottom, 5)
+                        HStack {
+                            Text("2014")
+                            Text("Comidol (Programming related circle)")
+                        }
+                        HStack {
+                            Text("2016")
+                            Text("Suriya (Math related circle)")
+                        }
+                        HStack {
+                            Text("2017")
+                            Text("Youth Hostel (Travel club)")
+                        }
+                        HStack {
+                            Text("2018")
+                            Text("Student council sports dept. manager")
+                        }
+                        HStack {
+                            Text("2019")
+                            Text("Conscripted into the army\n\t11~ Support unit headquarters squad leader").font(.caption)
+                        }
+                    }.padding(.top, 20).frame(width:350)
                 }
                 .padding(.top, 40)
             }.navigationBarTitle(Text("Profile Detail"), displayMode: .inline)
