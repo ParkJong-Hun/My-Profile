@@ -88,12 +88,6 @@ struct ProfilePage: View {
                                  destination: URL(string: "https://blog.naver.com/exoci")!)
                         }.font(.title2)
                     }.padding(.top, 20)
-                    Section(header: Text("Q&A")
-                                .font(.largeTitle)
-                                .fontWeight(.bold)
-                                ) {
-                        
-                    }.padding(.top, 20)
                 }.frame(width:350)
             }.navigationBarTitle(Text("My Profile"), displayMode: .inline)
         }
